@@ -43,8 +43,13 @@ const [isLoading, setIsLoading] = useState(false);
               email: values.email,
             })
           : await signInUser({ email: values.email });
-          setAccountId(user);
-          //console.log(accountId)
+        
+        if (type === "sign-in"){
+          setAccountId(user.accountId);}
+          else{
+            setAccountId(user)
+          }
+          console.log(accountId)
     } catch {
       setErrorMessage("Failed to create account. Please try again.");
     } finally {
