@@ -37,6 +37,8 @@ const OtpModal = ({
     // //console.log({ accountId, password });
 
     try {
+      console.log("accountId:", accountId, "password:", password);
+
       const sessionId = await verifySecret({ accountId, password });
 
       //console.log({ sessionId });
