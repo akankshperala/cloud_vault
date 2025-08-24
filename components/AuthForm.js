@@ -34,7 +34,7 @@ const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (values) => {
     setIsLoading(true);
     setErrorMessage("");
-    console.log("hhh",type)
+    //console.log("hhh",type)
     try {
       const user =
         type === "sign-up"
@@ -44,7 +44,7 @@ const [isLoading, setIsLoading] = useState(false);
             })
           : await signInUser({ email: values.email });
           setAccountId(user);
-          console.log(accountId)
+          //console.log(accountId)
     } catch {
       setErrorMessage("Failed to create account. Please try again.");
     } finally {
